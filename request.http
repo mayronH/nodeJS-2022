@@ -1,0 +1,32 @@
+@url = http://localhost:8081
+@id = f093329e-2b7b-4552-bb83-57cfc474752d
+
+POST {{url}}/products
+Content-Type: application/json
+
+{
+    "name": "iPhone 10",
+    "price": 2000
+}
+
+###
+
+GET {{url}}/products
+
+###
+
+GET {{url}}/products/{{id}}
+
+###
+
+PUT {{url}}/products/{{id}}
+Content-Type: application/json
+
+{
+    "name": "Redmi Note 10",
+    "price": 4000
+}
+
+###
+
+DELETE {{url}}/products/{{id}}
